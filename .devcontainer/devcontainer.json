@@ -1,0 +1,14 @@
+{
+  "remoteUser": "gcc",
+  "image": "tool-fedora-gcc:latest",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/usr/local/src,type=bind,Z",
+  "workspaceFolder": "/usr/local/src",
+  "runArgs": [ "--userns=keep-id" ],
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": ["ms-vscode.cpptools", "ms-vscode.cmake-tools"]
+    }
+  }
+}
